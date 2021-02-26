@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  eshopwebmvc:
+    image: eshopwebmvc
+    build:
+      context: .
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - '80:80'
